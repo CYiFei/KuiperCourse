@@ -7,8 +7,8 @@
 
 TEST(test_forward, forward1) {
   using namespace kuiper_infer;
-  const std::string &param_path = "tmp/resnet18_hub.pnnx.param";
-  const std::string &weight_path = "tmp/resnet18_hub.pnnx.bin";
+  const std::string &param_path = "../tmp/resnet18_hub.pnnx.param";
+  const std::string &weight_path = "../tmp/resnet18_hub.pnnx.bin";
   RuntimeGraph graph(param_path, weight_path);
   graph.Build("pnnx_input_0", "pnnx_output_0");
   const auto &operators = graph.operators();
@@ -24,8 +24,8 @@ TEST(test_forward, forward1) {
 
 TEST(test_forward, forward2) {
   using namespace kuiper_infer;
-  const std::string &param_path = "tmp/test.pnnx.param";
-  const std::string &weight_path = "tmp/test.pnnx.bin";
+  const std::string &param_path = "../tmp/test.pnnx.param";
+  const std::string &weight_path = "../tmp/test.pnnx.bin";
   RuntimeGraph graph(param_path, weight_path);
   graph.Build("pnnx_input_0", "pnnx_output_0");
   const auto &operators = graph.operators();
@@ -41,8 +41,8 @@ TEST(test_forward, forward2) {
 
 TEST(test_forward, forward3) {
   using namespace kuiper_infer;
-  const std::string &param_path = "tmp/ten.pnnx.param";
-  const std::string &weight_path = "tmp/ten.pnnx.bin";
+  const std::string &param_path = "../tmp/ten.pnnx.param";
+  const std::string &weight_path = "../tmp/ten.pnnx.bin";
   RuntimeGraph graph(param_path, weight_path);
   graph.Build("pnnx_input_0", "pnnx_output_0");
   const auto &operators = graph.operators();
