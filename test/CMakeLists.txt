@@ -10,7 +10,7 @@ link_directories(${OpenCV_LIBRARY_DIRS})
 
 aux_source_directory(../test/ DIR_TEST)
 
-set(link_lib glog::glog GTest::gtest)
+set(link_lib glog gtest)
 set(link_math_lib ${ARMADILLO_LIBRARIES} ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES})
 
 add_executable(test_kuiper ./test_main.cpp ${DIR_TEST})
